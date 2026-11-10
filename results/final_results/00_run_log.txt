@@ -1,0 +1,158 @@
+Final_Analysis.py
+Run at (UTC): 2026-11-10 13:53:43
+Python 3.13.18 | pandas 2.2.3 | numpy 2.4.6 | scipy 1.16.3 | matplotlib 3.10.0
+Input: /content/drive/MyDrive/ThesisExperiment_cleann/all_participants_trial_summary.csv
+Input SHA-256: a4046d5f960cb877861ad4bc50645bd5ce6ebc9087ca16ec035f440092384fc4
+
+Participants in file: 5 | trials in file: 25 | trials analysed: 24 | excluded trials: 1
+Participants with all 5 conditions (used in Friedman tests): [3, 4, 5, 6]
+Missing values per analysed measure:
+rmssd_delta               0
+AU04_mean                 0
+AU05_mean                 0
+AU07_mean                 0
+AU09_mean                 0
+arousal_mean              0
+valence_mean              0
+AU01_mean                 0
+AU02_mean                 0
+AU20_mean                 0
+AU17_mean                 0
+anthropomorphism          0
+animacy                   0
+likeability               0
+perceived_intelligence    0
+perceived_safety          0
+
+=== 02 Descriptives (mean) by condition, presentation order ===
+condition     Robot1  Robot2  Robot3  Robot4   Human
+measure                                             
+rmssd_delta    3.634 -11.273   2.064 -71.473 -26.181
+AU04_mean      0.142   0.124   0.101   0.169   0.129
+AU05_mean      0.050   0.052   0.070   0.072   0.063
+AU07_mean      0.049   0.051   0.032   0.054   0.067
+AU09_mean      0.019   0.029   0.026   0.028   0.016
+arousal_mean  -0.113  -0.103  -0.125  -0.073  -0.098
+valence_mean  -0.087  -0.021  -0.121  -0.232  -0.171
+AU01_mean      0.056   0.101   0.067   0.191   0.078
+AU02_mean      0.067   0.112   0.072   0.148   0.081
+AU20_mean      0.039   0.040   0.038   0.036   0.045
+AU17_mean      0.112   0.132   0.109   0.098   0.102
+
+=== 03 Friedman tests across the 5 conditions ===
+     measure        tier  N  chi2      p  kendalls_W  p_holm_all_11
+ rmssd_delta     primary  4   5.8 0.2146      0.3625         1.0000
+   AU04_mean     primary  4   4.0 0.4060      0.2500         1.0000
+   AU05_mean     primary  4  10.4 0.0342      0.6500         0.3762
+   AU07_mean     primary  4   1.0 0.9098      0.0625         1.0000
+   AU09_mean     primary  4   8.0 0.0916      0.5000         0.8242
+arousal_mean     primary  4   3.2 0.5249      0.2000         1.0000
+valence_mean     primary  4   3.0 0.5578      0.1875         1.0000
+   AU01_mean exploratory  4  10.2 0.0372      0.6375         0.3762
+   AU02_mean exploratory  4   2.2 0.6990      0.1375         1.0000
+   AU20_mean exploratory  4   0.8 0.9384      0.0500         1.0000
+   AU17_mean exploratory  4   4.4 0.3546      0.2750         1.0000
+
+=== 04 Pooled correlations: 55 tests; 4 with p<.05 uncorrected, 0 after Holm ===
+     measure      godspeed_subscale  N  pearson_r  pearson_p  ci95_low  ci95_high  spearman_rho  pearson_p_holm_all_55
+arousal_mean       perceived_safety 24    -0.5503     0.0053   -0.7804    -0.1888       -0.5742                 0.2935
+arousal_mean       anthropomorphism 24     0.4598     0.0238    0.0693     0.7281        0.4940                 1.0000
+arousal_mean                animacy 24     0.4408     0.0311    0.0455     0.7168        0.4474                 1.0000
+   AU07_mean       perceived_safety 24    -0.4123     0.0453   -0.6994    -0.0107       -0.3791                 1.0000
+arousal_mean perceived_intelligence 24     0.3963     0.0552   -0.0084     0.6895        0.4434                 1.0000
+valence_mean       anthropomorphism 24    -0.3574     0.0864   -0.6650     0.0537       -0.3086                 1.0000
+ rmssd_delta       anthropomorphism 24    -0.3358     0.1086   -0.6510     0.0781       -0.3454                 1.0000
+   AU20_mean       perceived_safety 24    -0.3263     0.1197   -0.6448     0.0888       -0.3325                 1.0000
+   AU09_mean perceived_intelligence 24    -0.3125     0.1371   -0.6358     0.1040       -0.3055                 1.0000
+   AU01_mean       perceived_safety 24    -0.2767     0.1906   -0.6118     0.1426       -0.1445                 1.0000
+
+=== 05 Robustness of the strongest pooled correlations ===
+     measure      godspeed_subscale  pearson_r_pooled  r_within_participant  p_within_participant  r_within_condition  p_within_condition  loo_r_min  loo_r_max  loo_sign_stays_same
+   AU07_mean       perceived_safety            -0.412                -0.516                 0.020              -0.495               0.026     -0.602     -0.290                 True
+arousal_mean                animacy             0.441                 0.427                 0.061               0.688               0.001      0.318      0.522                 True
+arousal_mean perceived_intelligence             0.396                 0.417                 0.067               0.450               0.046      0.319      0.512                 True
+arousal_mean       anthropomorphism             0.460                 0.409                 0.074               0.668               0.001      0.351      0.534                 True
+arousal_mean       perceived_safety            -0.550                -0.408                 0.074              -0.552               0.012     -0.578     -0.484                 True
+valence_mean       anthropomorphism            -0.357                -0.326                 0.160              -0.176               0.458     -0.522     -0.290                 True
+
+=== 06 Godspeed ratings (mean) by condition ===
+condition               Robot1  Robot2  Robot3  Robot4  Human
+godspeed_subscale                                            
+animacy                   1.83    2.93    3.37    3.83   4.97
+anthropomorphism          1.72    2.44    3.00    4.00   5.00
+likeability               3.20    3.80    3.08    2.85   4.12
+perceived_intelligence    2.36    2.52    3.28    4.05   4.44
+perceived_safety          4.13    3.93    3.20    1.92   2.87
+     godspeed_subscale  N    chi2      p  kendalls_W  p_holm_5
+      anthropomorphism  4 13.6410 0.0085      0.8526    0.0427
+               animacy  4 11.0000 0.0266      0.6875    0.1063
+           likeability  4  3.2105 0.5232      0.2007    0.5232
+perceived_intelligence  4 10.4000 0.0342      0.6500    0.1063
+      perceived_safety  4  8.4865 0.0753      0.5304    0.1506
+
+=== 07 Cronbach's alpha (all analysed trials pooled) ===
+     godspeed_subscale  n_items  n_trials  cronbach_alpha
+      anthropomorphism        5        24           0.946
+               animacy        6        24           0.951
+           likeability        5        24           0.861
+perceived_intelligence        5        24           0.902
+      perceived_safety        3        24           0.906
+
+=== 08 Sensitivity: results without [(5, 'Human')] ===
+Tests whose significance (p<.05) changes when those trials are left out: 2 of 66
+    test      measure godspeed_subscale  main_N  main_stat  main_p  sens_N  sens_stat  sens_p
+friedman    AU05_mean                         4    10.4000  0.0342       3    11.4667  0.0218
+friedman    AU01_mean                         4    10.2000  0.0372       3     7.4667  0.1132
+ pearson    AU07_mean  perceived_safety      24    -0.4123  0.0453      23    -0.4114  0.0511
+ pearson arousal_mean  anthropomorphism      24     0.4598  0.0238      23     0.4525  0.0302
+ pearson arousal_mean           animacy      24     0.4408  0.0311      23     0.4320  0.0395
+ pearson arousal_mean  perceived_safety      24    -0.5503  0.0053      23    -0.5699  0.0045
+
+(09 skipped: all_participants_trial_summary_BEFORE_fps_correction.csv not found. Keep a copy of the summary file from BEFORE the frame-rate correction under that name to see its effect.)
+
+=== 10 Heart (RMSSD delta) vs camera measures: 10 tests; 0 with p<.05 uncorrected, 0 after Holm ===
+camera_measure  N  pearson_r  pearson_p  ci95_low  ci95_high  spearman_rho  r_within_participant  p_within_participant  pearson_p_holm_all_10
+     AU09_mean 24    -0.3904     0.0593   -0.6858     0.0154       -0.4591               -0.0356                0.8815                 0.5926
+  valence_mean 24     0.2939     0.1634   -0.1243     0.6234        0.4400                0.1624                0.4939                 1.0000
+     AU07_mean 24     0.2668     0.2075   -0.1530     0.6051        0.0174                0.0250                0.9166                 1.0000
+     AU20_mean 24     0.2602     0.2195   -0.1600     0.6006        0.2904                0.1382                0.5613                 1.0000
+  arousal_mean 24    -0.2362     0.2666   -0.5839     0.1848       -0.0252               -0.4708                0.0362                 1.0000
+     AU17_mean 24     0.2203     0.3009   -0.2009     0.5728        0.0878               -0.0123                0.9590                 1.0000
+     AU04_mean 24    -0.1220     0.5702   -0.5007     0.2960       -0.0157                0.3404                0.1419                 1.0000
+     AU01_mean 24    -0.1071     0.6183   -0.4894     0.3097       -0.0704               -0.2771                0.2370                 1.0000
+     AU05_mean 24     0.0882     0.6820   -0.3268     0.4747        0.1791               -0.5974                0.0054                 1.0000
+     AU02_mean 24    -0.0610     0.7771   -0.4532     0.3510        0.1426               -0.2562                0.2755                 1.0000
+
+=== 11 Each measure: r with the other sensor (RMSSD delta) and r with each Godspeed subscale ===
+     measure  r_with_rmssd_delta  r_anthropomorphism  r_animacy  r_likeability  r_perceived_intelligence  r_perceived_safety
+ rmssd_delta                 NaN              -0.336     -0.260          0.175                    -0.226               0.248
+   AU04_mean              -0.122              -0.111     -0.193         -0.105                    -0.179               0.148
+   AU05_mean               0.088               0.054      0.142          0.112                     0.203              -0.190
+   AU07_mean               0.267               0.272      0.115          0.014                     0.096              -0.412
+   AU09_mean              -0.390              -0.218     -0.214         -0.172                    -0.312               0.184
+arousal_mean              -0.236               0.460      0.441         -0.072                     0.396              -0.550
+valence_mean               0.294              -0.357     -0.154          0.063                    -0.218               0.120
+   AU01_mean              -0.107               0.236      0.200         -0.066                     0.190              -0.277
+   AU02_mean              -0.061               0.184      0.191         -0.043                     0.141              -0.234
+   AU20_mean               0.260               0.245      0.185          0.094                     0.193              -0.326
+   AU17_mean               0.220               0.051      0.013         -0.023                    -0.014              -0.184
+
+All outputs saved to: /content/drive/MyDrive/ThesisExperiment_cleann/final_results
+Files produced by Final_Analysis.py
+
+00_run_log.txt                    everything printed by the script, library versions, input file hash
+01_data_completeness.csv          which participant x condition trials were included (True) or excluded (False)
+02_descriptives_by_condition.csv  n, mean, SD, median, min, max per measure and condition
+03_friedman_tests.csv             11 condition tests: chi2, df, p, Kendall's W, Holm-adjusted p
+04_correlations_pooled.csv        55 measure x Godspeed correlations (Pearson + Spearman, 95% CI, Holm p)
+05_correlations_robustness.csv    same 55 pairs: within-participant, within-condition, leave-one-participant-out
+06_godspeed_by_condition.csv      Godspeed ratings per condition + Friedman tests (5 subscales)
+07_godspeed_reliability.csv       Cronbach's alpha per Godspeed subscale
+08_sensitivity_excluding_trials.csv  same tests without the trials in SENSITIVITY_EXCLUDE
+09_fps_correction_effect.csv      change in each trial mean after the frame-rate correction
+10_heart_vs_camera_correlations.csv  RMSSD delta (heart) vs each camera measure: Pearson/Spearman, CI, within-participant, within-condition, leave-one-out, sensitivity, Holm
+11_sensors_vs_godspeed_side_by_side.csv  each measure: r with RMSSD delta and r with each Godspeed subscale
+fig1_au_means_by_condition.png    AU means by condition (presentation order)
+fig2_arousal_vs_safety.png        arousal vs Perceived Safety, one colour per participant
+fig3_rmssd_delta_by_condition.png RMSSD delta by condition
+
